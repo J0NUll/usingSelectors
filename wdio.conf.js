@@ -1,10 +1,12 @@
 exports.config = {
+
     //
     // ====================
     // Runner Configuration
     // ====================
     // WebdriverIO supports running e2e tests as well as unit and component tests.
     runner: 'local',
+
     
     //
     // ==================
@@ -52,11 +54,29 @@ exports.config = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
+
+        capabilities: [
+            {
+                maxInstances: 1,
+                browserName: 'chrome',
+                
+            },
+            {
+                maxInstances: 1,
+                browserName: 'MicrosoftEdge',
+                
+            },
+            {
+                maxInstances: 1,
+                browserName: 'firefox',
+                
+            }
+        ],
     
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
-        maxInstances: 5,
+        maxInstances: 10,
         //
         browserName: 'chrome',
         acceptInsecureCerts: true
@@ -112,7 +132,7 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ['chromedriver'],
+    services: [],
     
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
