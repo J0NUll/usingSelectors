@@ -1,6 +1,6 @@
 
 
-const Page = require('./page');
+import Page from  './page.js';
 
 /**
  * sub page containing specific selectors and methods for a specific page
@@ -39,4 +39,4 @@ class LoginPage extends Page {
     }
 }
 
-module.exports = new LoginPage();
+export default new LoginPage(); 

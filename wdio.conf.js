@@ -1,5 +1,5 @@
-exports.config = {
-
+//exports.config = {
+export const config = {
     //
     // ====================
     // Runner Configuration
@@ -55,23 +55,7 @@ exports.config = {
     //
     capabilities: [{
 
-        capabilities: [
-            {
-                maxInstances: 1,
-                browserName: 'chrome',
-                
-            },
-            {
-                maxInstances: 1,
-                browserName: 'MicrosoftEdge',
-                
-            },
-            {
-                maxInstances: 1,
-                browserName: 'firefox',
-                
-            }
-        ],
+        
     
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than

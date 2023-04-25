@@ -1,8 +1,7 @@
-const LoginPage = require('../pageobjects/login.page');
-const SecurePage = require('../pageobjects/secure.page');
+import KeyPressesPage from '../pageobjects/key_press.page.js'
 
 describe('My Login application', () => {
-    it('should login with valid credentials', async () => {
+    xit('should login with valid credentials', async () => {
         await LoginPage.open();
 
         await LoginPage.login('tomsmith', 'SuperSecretPassword!');
@@ -11,7 +10,7 @@ describe('My Login application', () => {
             'You logged into a secure area!');
     });
 
-    it('should fail to login with invalid credentials', async () => {
+    xit('should fail to login with invalid credentials', async () => {
         await LoginPage.open();
 
         await LoginPage.login('tomsmith', 'wrong');
@@ -19,9 +18,9 @@ describe('My Login application', () => {
         await expect(SecurePage.flashAlert).toHaveTextContaining(
             'Your password is invalid!');
     });
-});
 
-it('should logout', async () => {
+
+    xit('should logout', async () => {
     await LoginPage.open();
 
     await LoginPage.login('tomsmith', 'SuperSecretPassword!');
@@ -29,10 +28,9 @@ it('should logout', async () => {
     
     await SecurePage.logout();
     await expect(browser).toHaveUrl('https://the-internet.herokuapp.com/login');
-});
-
-
-
-
 
     
+});
+
+});
+

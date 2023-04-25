@@ -1,4 +1,4 @@
-const Page = require('./page');
+import Page from './page.js';
 
 /**
  * sub page containing specific selectors and methods for a specific page
@@ -8,10 +8,10 @@ class KeyPressesPage extends Page {
      * define selectors using getter methods
      */
     get keyPressInput() {
-        return $('#target')
+        return $('#target');
     }
     get keyPressResult() {
-        return $('#result')
+        return $('#result');
     }
 
     async pressAkey (input) {
@@ -25,5 +25,5 @@ class KeyPressesPage extends Page {
     }
 }
 
-module.exports = new KeyPressesPage();
+export default new KeyPressesPage(); 
 
